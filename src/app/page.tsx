@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <div>
       <div>
-        <div className="border-2 border-amber-600 p-5 container mx-auto flex flex-row justify-between items-center">
+        <div className="p-5 container mx-auto flex flex-row justify-between items-center">
           <svg width="102" height="32" viewBox="0 0 3490 1080">
             <g id="logo-symbol">
               <path
@@ -70,7 +70,10 @@ export default function Home() {
               className={`rounded-md border-2 px-3 py-1.5 ${defaultTransition}
               text-[${defaultUseColor}]
               border-[${defaultUseColor}] 
-              font-semibold 
+              font-semibold
+              flex
+              items-center
+              justify-center 
               hover:bg-[#FF385C] hover:text-white
             hover:border-[#FF385C]`}
             >
