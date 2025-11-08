@@ -6,30 +6,41 @@ interface IProps {
   width: number;
   textColor: string;
   firstColor: string;
-  lastColor: string
+  lastColor: string;
 }
 
 const Logo = ({ width, textColor, firstColor, lastColor }: IProps) => {
   const height = width - 70;
   const textLogoColor = `fill-[${textColor}]`;
   const firstIconColor = `${firstColor}`;
-  const lastIconColor = `${lastColor}`
+  const lastIconColor = `${lastColor}`;
 
   return (
     <div>
       <svg width={width} height={height} viewBox="0 0 3490 1080">
-
         <defs>
-            <linearGradient id="icon-stroke-gradient" x1={"0%"} y1={"0%"} x2={"100%"} y2={"100%"}>
-                <stop offset={"0%"} style={{
-                    stopColor: firstIconColor,
-                    stopOpacity: 1
-                }} />
-                <stop offset={"100%"} style={{
-                    stopColor: lastIconColor,
-                    stopOpacity: 1
-                }} />
-            </linearGradient>
+          <linearGradient
+            id="icon-stroke-gradient"
+            x1={"0%"}
+            y1={"0%"}
+            x2={"100%"}
+            y2={"100%"}
+          >
+            <stop
+              offset={"0%"}
+              style={{
+                stopColor: firstIconColor,
+                stopOpacity: 1,
+              }}
+            />
+            <stop
+              offset={"100%"}
+              style={{
+                stopColor: lastIconColor,
+                stopOpacity: 1,
+              }}
+            />
+          </linearGradient>
         </defs>
         <g id="logo-symbol">
           <path
