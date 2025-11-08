@@ -38,7 +38,7 @@ export default function Home() {
           <Logo 
             width={102}
             textColor={"#FF385C"}
-            firstColor={"#FF385C"}
+            firstColor={"#A50036"}
             lastColor={"#FF385C"}
           />
           <div className={`flex flex-row gap-6 ${poppins.className}`}>

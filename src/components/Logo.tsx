@@ -20,7 +20,7 @@ const Logo = ({ width, textColor, firstColor, lastColor }: IProps) => {
       <svg width={width} height={height} viewBox="0 0 3490 1080">
 
         <defs>
-            <linearGradient id="icon-stroke-gradient" x1={"0%"} y1={"0%"} x2={"100%"} y2={"0%"}>
+            <linearGradient id="icon-stroke-gradient" x1={"0%"} y1={"0%"} x2={"100%"} y2={"100%"}>
                 <stop offset={"0%"} style={{
                     stopColor: firstIconColor,
                     stopOpacity: 1
