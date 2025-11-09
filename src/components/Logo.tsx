@@ -1,7 +1,5 @@
 "use client";
 
-// const logoDefaultColor = `fill-[#FF385C]`;
-
 interface IProps {
   width: number;
   textColor: string;

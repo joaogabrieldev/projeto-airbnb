@@ -1,4 +1,5 @@
 ### Bibliotecas Utilizadas (Além do Next)
 
-- ShadCN 
+<!-- - ShadCN  -->
 - Lucide React
+- Swiper

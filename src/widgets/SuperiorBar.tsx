@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import { useState } from "react";
 
+import { defaultTransition } from "@/assets/defaultVariables";
 import LoginButton from "@/components/LoginButton";
 import Logo from "@/components/Logo";
 import NavItem from "@/components/NavItem";
@@ -13,10 +14,8 @@ const poppins = Poppins({
 const SuperiorBar = () => {
   const [activeItem, setActiveItem] = useState("Acomodações");
 
-  const defaultTransition = `transition duration-150 ease-in-out`;
-
   return (
-    <div className="container mx-auto flex flex-row items-center justify-between p-6">
+    <div className="mx-auto flex flex-row items-center justify-between p-6">
       <Logo
         width={102}
         textColor={"#FF385C"}
