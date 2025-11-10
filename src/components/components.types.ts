@@ -17,3 +17,6 @@ export interface INavIconProps {
   // iconHeight: number;
   label: string;
 }
+export interface IAccommodationCardProps {
+  key: number  
+}
