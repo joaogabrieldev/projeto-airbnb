@@ -18,7 +18,7 @@ const SuperiorBar = () => {
     <div className="mx-auto flex flex-row items-center justify-between p-6">
       <Logo
         width={102}
-        textColor={"#FF385C"}
+        textColor={"#FF385E"}
         firstColor={"#A50036"}
         lastColor={"#FF385C"}
       />
