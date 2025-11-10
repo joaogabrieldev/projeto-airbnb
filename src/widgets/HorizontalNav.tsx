@@ -12,7 +12,7 @@ import NavIcon from "./../components/NavIcon";
 
 const HorizontalNav = () => {
   return (
-    <div className="flex flex-row items-center">
+    <div className="flex flex-row items-center select-none">
       {/* Nav */}
       <Swiper
         spaceBetween={10}
