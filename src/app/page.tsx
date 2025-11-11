@@ -1,6 +1,7 @@
 "use client";
 
 import Accommodations from "../widgets/Accommodations";
+import Footer from "./../widgets/Footer";
 import HorizontalNav from "./../widgets/HorizontalNav";
 import SearchBar from "./../widgets/SearchBar";
 import SuperiorBar from "./../widgets/SuperiorBar";
@@ -20,7 +21,9 @@ export default function Home() {
         <Accommodations />
       </main>
 
-      <footer className="container mx-auto mt-20">Rodapé</footer>
+      <footer className="w-full mt-10">
+        <Footer />
+      </footer>
     </div>
   );
 }
