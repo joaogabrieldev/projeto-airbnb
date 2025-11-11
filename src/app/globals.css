@@ -1,2 +1,30 @@
 @import "tailwindcss";
 
+.list-footer {
+  font-weight: 400;
+
+  &:not(&:last-child)::after {
+    list-style-type: none;
+    content: " ·";
+    font-weight: 900;
+    color: #ff385c;
+    padding-left: 3px;
+  }
+}
+
+.list-acc-details {
+  font-weight: 400;
+
+  &:not(&:last-child)::after {
+    list-style-type: none;
+    content: " |";
+    color: #000000;
+    font-weight: lighter;
+    padding-left: 3px;
+  }
+}
+
+li[acc-beneficts] {
+  display: flex;
+  flex-direction: row;
+}
