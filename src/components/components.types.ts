@@ -1,3 +1,13 @@
+import { AccommodationLocation } from "@/assets/assets.types";
+
+export interface ILogoProps {
+  width: number;
+  textColor: string;
+  firstColor: string;
+  lastColor: string;
+  href: string;
+}
+
 export interface IFilterButtonProps {
   value: string;
   defaultTransition: string;
@@ -17,12 +27,26 @@ export interface INavIconProps {
   // iconHeight: number;
   label: string;
 }
+export interface IAccommodationTitleProps {
+  label: string;
+  hasBadge: boolean;
+}
 export interface IAccommodationCardProps {
-  className: string;
-  key: number;
   src: string;
   alt: string;
   width: number;
-  height: number;
+  slug: string;
 }
 
+export interface IAccommodationDescProps {
+  date: string;
+  host: string;
+  location: Pick<AccommodationLocation, "description">;
+  price: number;
+  rating: number;
+}
+
+export type BadgeProps = {
+  children: React.ReactNode;
+  className: string;
+};
