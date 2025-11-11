@@ -32,7 +32,7 @@ const Accommodations = () => {
               height={300}
             />
             <div className="flex justify-between">
-              <div>Local</div>
+              <div>{}</div>
               <div>Rating</div>
             </div>
             <div>Horario</div>

@@ -18,5 +18,11 @@ export interface INavIconProps {
   label: string;
 }
 export interface IAccommodationCardProps {
-  key: number  
+  className: string;
+  key: number;
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
 }
+
