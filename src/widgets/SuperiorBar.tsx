@@ -21,6 +21,7 @@ const SuperiorBar = () => {
         textColor={"#FF385E"}
         firstColor={"#A50036"}
         lastColor={"#FF385C"}
+        href="/"
       />
       <div className={`flex flex-row gap-6 ${poppins.className}`}>
         <NavItem
