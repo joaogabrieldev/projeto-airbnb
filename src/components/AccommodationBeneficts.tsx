@@ -19,7 +19,7 @@ import Benefict from "./Benefict";
 
 const AccommodationBeneficts = () => {
   return (
-    <ul className="grid grid-cols-2">
+    <ul className="grid grid-cols-2 gap-x-1">
       <Benefict>
         <IconPhoto />
         <span>Vista para as montanhas</span>
@@ -47,10 +47,6 @@ const AccommodationBeneficts = () => {
       <Benefict>
         <IconWifi/>
         <span>Wi-Fi rápido (83 Mbps)</span>
-      </Benefict>
-      <Benefict>
-        <IconParking/>
-        <span>Estacionamento incluído</span>
       </Benefict>
       <Benefict>
         <IconParking/>
