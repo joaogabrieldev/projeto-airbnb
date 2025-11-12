@@ -10,6 +10,7 @@ const AccommodationDetails = () => {
         secondInfo={"5 quartos"}
         thirdInfo="5 camas"
         fourthInfo="6 banheiros"
+        fifthInfo=""
       />
       <h2 className="pt-4 text-xl font-semibold">O que esse lugar oferece?</h2>
       <AccommodationBeneficts />

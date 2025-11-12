@@ -245,7 +245,7 @@ export default async function DetailsPage({
 }: {
   params: Promise<IDetailsPageProps>;
 }) {
-  console.log(params);
+  // console.log(params);
 
   return (
     <div>

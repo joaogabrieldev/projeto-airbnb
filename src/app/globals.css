@@ -28,3 +28,10 @@ li[acc-beneficts] {
   display: flex;
   flex-direction: row;
 }
+
+#testimonial-body {
+  & #testimonial-cardTitle::after {
+    content: " ·";
+    padding-left: 3px;
+  }
+}
