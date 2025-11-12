@@ -261,7 +261,10 @@ export default async function DetailsPage({
         <PhotoGallery images={accommodation.photos} />
         <div className="flex flex-col md:flex-row">
           <AccommodationDetails />
-          <AccommodationTestimonials />
+          <AccommodationTestimonials
+            rating={accommodation.rating}
+            accommodationArray={accommodation.testimonials}
+          />
         </div>
       </main>
 
