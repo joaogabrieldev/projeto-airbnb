@@ -11,7 +11,7 @@ const AccommodationDetails = () => {
         thirdInfo="5 camas"
         fourthInfo="6 banheiros"
       />
-      <h2 className="py-4 text-xl font-semibold">O que esse lugar oferece?</h2>
+      <h2 className="pt-4 text-xl font-semibold">O que esse lugar oferece?</h2>
       <AccommodationBeneficts />
     </div>
   );
