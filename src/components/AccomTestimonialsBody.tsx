@@ -1,50 +1,35 @@
-import { Star } from "lucide-react";
 import Image from "next/image";
 
-interface ITestimonialsBodyProps {
-  id?: number;
-  name: string;
-  image: string;
+interface IAccTestimonialBodyProps {
+  profilePic: string;
+  personName: string;
   comment: string;
-  rating: number;
-  customerTime: number;
-  createdAt: number;
-  stayedAt?: number;
 }
 
-const AccomTestimonialsBody = ({
-  name,
-  image,
+const AccomTestimonialBody = ({
+  profilePic,
+  personName,
   comment,
-  rating,
-  customerTime,
-  createdAt,
-}: ITestimonialsBodyProps) => {
-  const CustomerTimePrep = customerTime > 1 ? "ano" : "anos";
-
+}: IAccTestimonialBodyProps) => {
   return (
     <div>
-      <header id="title">
-        <div>
-          <Image src={image} alt="Profile Pic" />
+      <div className="flex flex-row items-center gap-3">
+        <div id="image" className="flex items-start py-2.5">
+          <Image
+            className="aspect-square rounded-full object-cover"
+            width={50}
+            height={50}
+            src={profilePic}
+            alt={"Profile Pic"}
+          />
         </div>
-        <div>
-          <h3 className="text-[16px] font-semibold">{name}</h3>
-          <div className="text-[14px] text-zinc-500">
-            há {createdAt} {CustomerTimePrep} no Airbnb
-          </div>
+        <div className="flex flex-col gap-0.5">
+          <span className="font-semibold">{personName}</span>
+          <p>{comment}</p>
         </div>
-      </header>
-      <main id="testimonial-body" className="bg-amber-800 px-5 text-white">
-        <div className="flex flex-row items-center gap-1.5">
-          <Star width={10} height={10} fill="black" />
-          <span id="testimonial-cardTitle" className="font-semibold">
-            {rating}
-          </span>
-        </div>
-      </main>
+      </div>
     </div>
   );
 };
 
-export default AccomTestimonialsBody;
+export default AccomTestimonialBody;
