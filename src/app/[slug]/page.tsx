@@ -8,7 +8,7 @@ import PhotoGallery from "@/widgets/PhotosGallery";
 import SearchBar from "@/widgets/SearchBar";
 import SuperiorBar from "@/widgets/SuperiorBar";
 
-import AccommodationTestimonials from "./../../widgets/AccommodationTestimonials";
+import AccommodationTestimonials from "@/widgets/AccommodationTestimonials";
 
 const accommodation = {
   number: 1,
@@ -262,8 +262,7 @@ export default async function DetailsPage({
         <div className="flex flex-col md:flex-row">
           <AccommodationDetails />
           <AccommodationTestimonials
-            rating={accommodation.rating}
-            accommodationArray={accommodation.testimonials}
+            accommodationArray={accommodation}
           />
         </div>
       </main>
