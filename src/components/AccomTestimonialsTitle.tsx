@@ -1,34 +1,35 @@
+import { IAccomodation } from "@/assets/assets.types";
 import { Star } from "lucide-react";
 
-interface ITestimonialsTitleProps {
+
+interface IAccomTestimonialTitleProps {
   title: string;
-  rating: number;
-  accommodationArray: object[];
-  avaliations: string;
+  rating: number
+  accommodationArray: IAccomodation
+
 }
 
-const AccomTestimonialsTitle = ({
-  title,
-  rating,
+const AccomTestimonialTitle = ({
   accommodationArray,
-  avaliations,
-}: ITestimonialsTitleProps) => {
+  title,
+  rating
+}: IAccomTestimonialTitleProps) => {
+  
+  const avaliationsSufix =
+    accommodationArray.testimonials.length > 1 ? "avaliações" : "avaliação";
+
   return (
     <div>
-      <h3 className="text-xl font-semibold">{title}</h3>
-      <div className="flex flex-row items-center gap-1.5">
-        <div className="flex flex-row items-center gap-1">
-          <Star width={15} height={15} fill="black" />
-          <span>{rating}</span>
-        </div>
-        <div>
-          <span>
-            ({accommodationArray.length} {avaliations})
-          </span>
-        </div>
+      <div className="">
+        <h3 className="text-xl font-semibold">{title}</h3>
+      </div>
+      <div className="flex flex-row gap-1 items-center">
+        <Star width={15} height={15} fill="black"/>
+        <span className="font-semibold">{rating}</span>
+        <span>({accommodationArray.testimonials.length} {avaliationsSufix})</span>
       </div>
     </div>
   );
 };
 
-export default AccomTestimonialsTitle;
+export default AccomTestimonialTitle;
