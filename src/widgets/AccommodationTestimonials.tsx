@@ -1,29 +1,35 @@
-import { Star } from "lucide-react";
+import { IAccomodation } from "@/assets/assets.types";
+import AccomTestimonialBody from "@/components/AccomTestimonialsBody";
+import AccomTestimonialTitle from "@/components/AccomTestimonialsTitle";
 
-import AccomTestimonialsTitle from "../components/AccomTestimonialsTitle";
-import AccomTestimonialsBody from './../components/AccomTestimonialsBody';
-
-interface IAccTestimonialsProps {
-  rating: number;
-  accommodationArray: object[];
+interface IAccomTestimonialProps {
+  accommodationArray: IAccomodation;
 }
 
 const AccommodationTestimonials = ({
-  rating,
   accommodationArray,
-}: IAccTestimonialsProps) => {
-  const avaliations =
-    accommodationArray.length > 2 ? "avaliações" : "avaliação";
+}: IAccomTestimonialProps) => {
+  const testimonials = accommodationArray.testimonials;
 
   return (
     <div className="w-full py-4">
-      <AccomTestimonialsTitle
-        title="Depoimentos"
-        rating={rating}
-        accommodationArray={accommodationArray}
-        avaliations={avaliations}
-      />
-      <AccomTestimonialsBody name={""} image={""} comment={""} rating={0} customerTime={0} createdAt={0} stayedAt={0} />
+      <header className="">
+        <AccomTestimonialTitle
+          title="Depoimentos"
+          rating={accommodationArray.rating}
+          accommodationArray={accommodationArray}
+        />
+      </header>
+      <main className="mt-3.5">
+        {testimonials.map((item, index) => (
+          <AccomTestimonialBody
+            key={index}
+            profilePic={item.image}
+            personName={item.name}
+            comment={item.comment}
+          />
+        ))}
+      </main>
     </div>
   );
 };
