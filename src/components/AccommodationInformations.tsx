@@ -17,16 +17,12 @@ const AccommodationInformation = ({
 }: IAccInformationProps) => {
   return (
     <ul className="flex w-full flex-row gap-2 select-none">
-      <li className="list-acc-details">{firstInfo}</li>
-      <li className="list-acc-details">{secondInfo}</li>
-      <li className="list-acc-details">{thirdInfo}</li>
-      <li className="list-acc-details">{fourthInfo}</li>
-      {fifthInfo?.length !== 0 ? (
-        <li className="list-acc-details">{fifthInfo}</li>
-      ) : null}
-      {sixthInfo?.length !== 0 ? (
-        <li className="list-acc-details">{sixthInfo}</li>
-      ) : null}
+      {firstInfo && <li className="list-acc-details">{firstInfo}</li>}
+      {secondInfo && <li className="list-acc-details">{secondInfo}</li>}
+      {thirdInfo && <li className="list-acc-details">{thirdInfo}</li>}
+      {fourthInfo && <li className="list-acc-details">{fourthInfo}</li>}
+      {fifthInfo && <li className="list-acc-details">{fifthInfo}</li>}
+      {sixthInfo && <li className="list-acc-details">{sixthInfo}</li>}
     </ul>
   );
 };
