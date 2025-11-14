@@ -15,7 +15,7 @@ interface IPhotoGalleryProps {
 
 const PhotoGallery = ({ images }: IPhotoGalleryProps) => {
   return (
-    <div>
+    <div className="">
       <div className="relative grid grid-cols-1 gap-2 rounded-xl md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {images.slice(0, 5).map((image, index) => {
           const firstImageSpan = index == 0 ? "col-span-2 row-span-2" : "";
