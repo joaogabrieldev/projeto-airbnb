@@ -56,7 +56,10 @@ Este projeto é um clone da interface do Airbnb, desenvolvido como uma aplicaç�
 ### 🔜 Próximas Funcionalidades
 
 - 🔍 **Sistema de Busca**: Barra de pesquisa para encontrar acomodações
+
 - 🏷️ **Filtros por Categoria**: Filtros horizontais para diferentes tipos de propriedades
+
+- ⚙️ **Server-Side**> Implementação do Back-end com Node.js e Banco SQL com Prisma
 
 ---
 
