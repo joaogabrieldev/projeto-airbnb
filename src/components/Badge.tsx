@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 
-import { BadgeProps } from "./components.types";
+import { BadgeProps } from "../types/components.types";
 
 const inter = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],

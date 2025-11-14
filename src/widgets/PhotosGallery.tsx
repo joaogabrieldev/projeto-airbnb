@@ -20,9 +20,9 @@ const PhotoGallery = ({ images }: IPhotoGalleryProps) => {
         {images.slice(0, 5).map((image, index) => {
           const firstImageSpan = index == 0 ? "col-span-2 row-span-2" : "";
           const firstImageBorder =
-            index == 0 ? "rounded-tl-xl rounded-bl-xl " : "";
-          const fourthImage = index == 2 ? "rounded-tr-xl" : "";
-          const fifthImage = index == 4 ? "rounded-br-xl" : "";
+            index == 0 ? "rounded-tl-3xl rounded-bl-3xl " : "";
+          const fourthImage = index == 2 ? "rounded-tr-3xl" : "";
+          const fifthImage = index == 4 ? "rounded-br-3xl" : "";
           return (
             <div key={index} className={` ${firstImageSpan}`}>
               <Image

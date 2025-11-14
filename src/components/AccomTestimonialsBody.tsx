@@ -12,7 +12,7 @@ const AccomTestimonialBody = ({
   comment,
 }: IAccTestimonialBodyProps) => {
   return (
-    <div>
+    <div className="mt-4.5">
       <div className="flex flex-row items-center gap-3">
         <div id="image" className="flex items-start py-2.5">
           <Image

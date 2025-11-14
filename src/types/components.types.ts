@@ -1,4 +1,4 @@
-import { AccommodationLocation } from "@/assets/assets.types";
+import { AccommodationLocation } from "./assets.types";
 
 export interface ILogoProps {
   width: number;
@@ -41,7 +41,7 @@ export interface IAccommodationCardProps {
 export interface IAccommodationDescProps {
   date: string;
   host: string;
-  location: Pick<AccommodationLocation, "description">;
+  location: Omit<AccommodationLocation, "country">;
   price: number;
   rating: number;
 }

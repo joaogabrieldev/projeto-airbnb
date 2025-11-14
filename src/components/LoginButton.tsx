@@ -3,8 +3,7 @@ import Link from "next/link";
 
 import { defaultUseColor } from "@/assets/defaultVariables";
 
-import { ILoginButtonProps } from "./components.types";
-
+import { ILoginButtonProps } from "../types/components.types";
 
 const LoginButton = ({ value, defaultTransition, href }: ILoginButtonProps) => {
   return (

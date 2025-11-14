@@ -1,6 +1,6 @@
-import { IAccomodation } from "@/assets/assets.types";
 import AccomTestimonialBody from "@/components/AccomTestimonialsBody";
 import AccomTestimonialTitle from "@/components/AccomTestimonialsTitle";
+import { IAccomodation } from "@/types/assets.types";
 
 interface IAccomTestimonialProps {
   accommodationArray: IAccomodation;

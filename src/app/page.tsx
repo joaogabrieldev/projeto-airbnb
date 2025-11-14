@@ -7,6 +7,7 @@ import SearchBar from "./../widgets/SearchBar";
 import SuperiorBar from "./../widgets/SuperiorBar";
 
 export default function Home() {
+
   return (
     <div>
       <header className="container mx-auto">
@@ -21,7 +22,7 @@ export default function Home() {
         <Accommodations />
       </main>
 
-      <footer className="w-full mt-10">
+      <footer className="mt-10 w-full">
         <Footer />
       </footer>
     </div>

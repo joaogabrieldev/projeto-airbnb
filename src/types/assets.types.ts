@@ -1,10 +1,3 @@
-export type navIcon = {
-  id: string;
-  description: string;
-  source: string;
-  url: string;
-};
-
 export type AccommodationLocation = {
   description: string;
   city: string;
@@ -43,3 +36,10 @@ export interface IAccomodation {
   testimonials: AccommodationTestimonials[];
   photos: AccommodationPhotos[];
 }
+
+export type IAccommodationIcons = {
+  id: string;
+  description: string;
+  source: string;
+  url: string;
+};

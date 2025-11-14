@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import { ILogoProps } from "./components.types";
+import { ILogoProps } from "../types/components.types";
 
 const Logo = ({
   width,

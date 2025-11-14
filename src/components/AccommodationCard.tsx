@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { IAccommodationCardProps } from "./components.types";
+import { IAccommodationCardProps } from "../types/components.types";
 
 const AccommadationCard = ({
   src,

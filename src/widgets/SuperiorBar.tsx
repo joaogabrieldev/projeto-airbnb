@@ -1,3 +1,5 @@
+"use client"
+
 import { Poppins } from "next/font/google";
 import { useState } from "react";
 

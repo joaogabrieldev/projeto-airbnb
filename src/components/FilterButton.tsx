@@ -1,6 +1,6 @@
 import { SlidersHorizontal } from "lucide-react";
 
-import { IFilterButtonProps } from "@/components/components.types";
+import { IFilterButtonProps } from "@/types/components.types";
 
 const FilterButton = ({ value, defaultTransition }: IFilterButtonProps) => {
   return (
