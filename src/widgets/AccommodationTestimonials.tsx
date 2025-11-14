@@ -27,6 +27,7 @@ const AccommodationTestimonials = ({
             profilePic={item.image}
             personName={item.name}
             comment={item.comment}
+            testimonialRating={item.rating}
           />
         ))}
       </main>
