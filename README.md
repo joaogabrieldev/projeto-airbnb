@@ -59,7 +59,7 @@ Este projeto é um clone da interface do Airbnb, desenvolvido como uma aplicaç�
 
 - 🏷️ **Filtros por Categoria**: Filtros horizontais para diferentes tipos de propriedades
 
-- ⚙️ **Server-Side**> Implementação do Back-end com Node.js e Banco SQL com Prisma
+- ⚙️ **Server-Side**: Implementação do Back-end com Node.js e Banco SQL com Prisma
 
 ---
 
