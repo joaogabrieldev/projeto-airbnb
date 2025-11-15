@@ -1,8 +1,9 @@
-/* eslint-disable @next/next/no-async-client-component */
 "use client";
 
 import { notFound } from "next/navigation";
+import { use, useEffect, useState } from "react";
 
+import { IAccomodation } from "@/types/assets.types";
 import { fetchDataByID } from "@/utils/api";
 import AccommodationDetails from "@/widgets/AccommodationDetails";
 import AccommodationTestimonials from "@/widgets/AccommodationTestimonials";
@@ -17,14 +18,48 @@ interface IDetailsPageProps {
   };
 }
 
-export default function DetailsPage({ params }: Promise<IDetailsPageProps>) {
+export default function DetailsPage({
+  params,
+}: {
+  params: Promise<IDetailsPageProps["params"]>;
+}) {
   // console.log(params);
 
-  const { slug } = params;
-  const accommodation = await fetchDataByID(slug);
+  const { slug } = use(params);
+
+  const [accommodation, setAccommodation] = useState<IAccomodation | null>(
+    null,
+  );
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const loadAccommodationData = async () => {
+      try {
+        const data = await fetchDataByID(slug);
+
+        if (!data) {
+          notFound();
+        } else {
+          setAccommodation(data);
+          setIsLoading(false);
+        }
+      } catch (error) {
+        console.error(error);
+        throw error;
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadAccommodationData();
+  }, [slug]);
+
+  if (isLoading) {
+    return <div>Carregando...</div>;
+  }
 
   if (!accommodation) {
-    notFound();
+    return null;
   }
 
   return (
@@ -37,10 +72,16 @@ export default function DetailsPage({ params }: Promise<IDetailsPageProps>) {
       <hr className="my-3 text-gray-400" />
 
       <main className="container mx-auto py-4">
-        <h1 className="py-2.5 text-2xl font-semibold">{accommodation.title}</h1>
+        <h1 className="py-2.5 text-2xl font-semibold">
+          {accommodation.location.description.replace(
+            "Brasil",
+            `${accommodation.location.state}`,
+          )}{" "}
+          - {accommodation.location.country}
+        </h1>
         <PhotoGallery images={accommodation.photos} />
         <div className="flex flex-col md:flex-row">
-          <AccommodationDetails />
+          <AccommodationDetails accommodation={accommodation} />
           <AccommodationTestimonials accommodationArray={accommodation} />
         </div>
       </main>
